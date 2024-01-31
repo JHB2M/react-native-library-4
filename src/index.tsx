@@ -1,5 +1,4 @@
 import { NativeModules, Platform } from 'react-native';
-
 const LINKING_ERROR =
   `The package 'react-native-library-4' doesn't seem to be linked. Make sure: \n\n` +
   Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
@@ -20,3 +19,5 @@ const Library4 = NativeModules.Library4
 export function multiply(a: number, b: number): Promise<number> {
   return Library4.multiply(a, b);
 }
+
+export { Button ,TextInput} from './components';
